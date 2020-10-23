@@ -39,10 +39,10 @@ public class Heap {
 
     }
 
-    public static void downAdjust(int[] arr, int parentIndex, int len){
+    private static void downAdjust(int[] arr, int parentIndex, int len){
         int childIndex = 2 * parentIndex + 1;
         int tmp = arr[parentIndex];
-        while (childIndex < len) {
+        while (childIndex <= len) {
             if (childIndex + 1 < len && arr[childIndex + 1] < arr[childIndex]) {
                 childIndex++;
             }
@@ -57,8 +57,8 @@ public class Heap {
 
     }
 
-    public static void buildHeap(int[] arr) {
-        for (int i = arr.length /2; i >= 0; i--) {
+    static void buildHeap(int[] arr) {
+        for (int i = (arr.length-2) /2; i >= 0; i--) {
             downAdjust(arr, i, arr.length-1);
         }
     }
