@@ -1,4 +1,4 @@
-package com.my.sort;
+package com.my.tree;
 
 /**
  * 二叉堆
@@ -35,7 +35,7 @@ public class Heap {
             childIndex = parentIndex;
             parentIndex = (parentIndex-1) /2;
         }
-        arr[parentIndex] = tmp;
+        arr[childIndex] = tmp;
 
     }
 
