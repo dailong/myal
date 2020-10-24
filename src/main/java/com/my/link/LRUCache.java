@@ -62,10 +62,12 @@ public class LRUCache {
 
     // 刷新被访问节点的位置
     private void refresh(Node node) {
-        if (node == end) {
+        if (node == end) { // 访问尾节点，无需移动
             return;
         } else {
+            // 移除节点
             removeNode(node);
+            // 重新插入节点
             addNode(node);
         }
 
