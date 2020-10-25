@@ -1,4 +1,7 @@
-package com.my.lecode;
+package com.my.code;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -24,8 +27,8 @@ package com.my.lecode;
 public class LongestSubString {
 
     public static void main(String[] args) {
-        String s = "";
-        lengthLongestSubString(s);
+
+
     }
 
     private static void lengthLongestSubString(String s) {
