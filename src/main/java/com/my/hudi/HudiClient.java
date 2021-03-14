@@ -49,7 +49,7 @@ public class HudiClient {
         sparkConf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
         JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
         HoodieEngineContext context = new HoodieSparkEngineContext(javaSparkContext);
-        HoodieTableMetaClient.initTableType(javaSparkContext.hadoopConfiguration(), basePath, HoodieTableType.valueOf(tableType),
+        HoodieTableMetaClient.initTableType(javaSparkContext.hadoopConfiguration(), tablePath, HoodieTableType.valueOf(tableType),
                 "demo", HoodieAvroPayload.class.getName());
 
         HoodieWriteConfig cfg = HoodieWriteConfig.newBuilder().withPath(tablePath)
